@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TommyMac 98 Web Desktop
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="control-panel.css">
+<link rel="stylesheet" href="style_bsod.css">
+<link rel="stylesheet" href="html-editor.css">
+<link rel="stylesheet" href="defrag.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         DESKTOP
+         ===================================================== -->
+
+    <main id="desktop">
+
+
+        <!-- =================================================
+             DESKTOP ICONS
+             ================================================= -->
+
+        <section
+            class="desktop-icons"
+            aria-label="Desktop"
+        >
+
+
+            <!-- MY COMPUTER -->
+
+            <button
+                class="desktop-icon"
+                data-app="my-computer"
+                type="button"
+            >
+
+                <img
+                    src="icons/w98_computer.png"
+                    alt=""
+                >
+
+                <span>
+                    My Computer
+                </span>
+
+            </button>
+
+
+            <!-- MY DOCUMENTS -->
+
+            <button
+                class="desktop-icon"
+                data-app="documents"
+                type="button"
+            >
+
+                <img
+                    src="icons/w98_documents.png"
+                    alt=""
+                >
+
+                <span>
+                    My Documents
+                </span>
+
+            </button>
+
+
+            <!-- INTERNET -->
+
+            <button
+                class="desktop-icon"
+                data-app="internet"
+                type="button"
+            >
+
+                <img
+                    src="icons/internet-explorer.png"
+                    alt=""
+                >
+
+                <span>
+                    Internet
+                </span>
+
+            </button>
+
+
+            <!-- INBOX -->
+
+            <button
+                class="desktop-icon"
+                data-app="email"
+                type="button"
+            >
+
+                <img
+                    src="icons/email.png"
+                    alt=""
+                >
+
+                <span>
+                    Inbox
+                </span>
+
+            </button>
+
+
+            <!-- GAMES -->
+
+            <button
+                class="desktop-icon"
+                data-app="games"
+                type="button"
+            >
+
+                <img
+                    src="icons/games.png"
+                    alt=""
+                >
+
+                <span>
+                    Games
+                </span>
+
+            </button>
+
+
+            <!-- RECYCLE BIN -->
+
+            <button
+                class="desktop-icon"
+                data-app="recycle-bin"
+                type="button"
+            >
+
+                <img
+                    src="icons/recycle-bin.png"
+                    alt=""
+                >
+
+                <span>
+                    Recycle Bin
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MY COMPUTER
+             ================================================= -->
+
+        <section
+            class="window"
+            id="my-computer-window"
+            data-app="my-computer"
+            data-minimized="false"
+            data-maximized="false"
+            hidden
+        >
+
+
+            <!-- TITLE BAR -->
+
+            <header class="window-titlebar">
+
+                <div class="window-title">
+
+                    <img
+                        src="icons/w98_computer.png"
+                        alt=""
+                    >
+
+                    <span>
+                        My Computer
+                    </span>
+
+                </div>
+
+
+                <div class="window-controls">
+
+                    <button
+                        class="window-button minimize"
+                        type="button"
+                        aria-label="Minimize"
+                    >
+                        _
+                    </button>
+
+                    <button
+                        class="window-button maximize"
+                        type="button"
+                        aria-label="Maximize"
+                    >
+                        □
+                    </button>
+
+                    <button
+                        class="window-button close"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- MENU -->
+
+            <nav class="window-menu">
+
+                <button type="button">
+                    File
+                </button>
+
+                <button type="button">
+                    Edit
+                </button>
+
+                <button type="button">
+                    View
+                </button>
+
+                <button type="button">
+                    Help
+                </button>
+
+            </nav>
+
+
+            <!-- TOOLBAR -->
+
+            <div class="window-toolbar">
+
+                <button type="button">
+                    Back
+                </button>
+
+                <button type="button">
+                    Forward
+                </button>
+
+                <button type="button">
+                    Up
+                </button>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="window-content">
+
+
+                <!-- C DRIVE -->
+
+                <div
+                    class="file-icon"
+                    data-file="c-drive"
+                >
+
+                    <img
+                        src="icons/hard-drive.png"
+                        alt=""
+                    >
+
+                    <span>
+                        (C:)
+                    </span>
+
+                </div>
+
+
+                <!-- MY DOCUMENTS -->
+
+                <div
+                    class="file-icon"
+                    data-file="my-documents"
+                    data-app="documents"
+                >
+
+                    <img
+                        src="icons/folder.png"
+                        alt=""
+                    >
+
+                    <span>
+                        My Documents
+                    </span>
+
+                </div>
+
+
+                <!-- PROGRAM FILES -->
+
+                <div
+                    class="file-icon"
+                    data-file="program-files"
+                >
+
+                    <img
+                        src="icons/folder.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Program Files
+                    </span>
+
+                </div>
+
+
+                <!-- WINDOWS -->
+
+                <div
+                    class="file-icon"
+                    data-file="windows"
+                >
+
+                    <img
+                        src="icons/folder.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Windows
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <footer class="window-statusbar">
+                4 objects
+            </footer>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             GAMES
+             ================================================= -->
+
+        <section
+            class="window"
+            id="games-window"
+            data-app="games"
+            data-minimized="false"
+            data-maximized="false"
+            hidden
+        >
+
+
+            <!-- TITLE BAR -->
+
+            <header class="window-titlebar">
+
+                <div class="window-title">
+
+                    <img
+                        src="icons/games.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Games
+                    </span>
+
+                </div>
+
+
+                <div class="window-controls">
+
+                    <button
+                        class="window-button minimize"
+                        type="button"
+                        aria-label="Minimize"
+                    >
+                        _
+                    </button>
+
+                    <button
+                        class="window-button maximize"
+                        type="button"
+                        aria-label="Maximize"
+                    >
+                        □
+                    </button>
+
+                    <button
+                        class="window-button close"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- MENU -->
+
+            <nav class="window-menu">
+
+                <button type="button">
+                    File
+                </button>
+
+                <button type="button">
+                    Edit
+                </button>
+
+                <button type="button">
+                    View
+                </button>
+
+                <button type="button">
+                    Help
+                </button>
+
+            </nav>
+
+
+            <!-- CONTENT -->
+
+            <div class="window-content games-content">
+
+
+                <!-- SOLITAIRE -->
+
+                <button
+                    class="game-icon"
+                    data-game="solitaire"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/solitaire.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Solitaire
+                    </span>
+
+                </button>
+
+
+                <!-- MEMORY -->
+
+                <button
+                    class="game-icon"
+                    data-game="memory"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/memory.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Memory
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <footer class="window-statusbar">
+                2 objects
+            </footer>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT WINDOW
+             ================================================= -->
+
+        <section
+            class="window"
+            id="about-window"
+            data-app="about"
+            data-minimized="false"
+            data-maximized="false"
+            hidden
+        >
+
+
+            <header class="window-titlebar">
+
+                <div class="window-title">
+
+                    <img
+                        src="icons/notepad.png"
+                        alt=""
+                    >
+
+                    <span>
+                        About This Computer
+                    </span>
+
+                </div>
+
+
+                <div class="window-controls">
+
+                    <button
+                        class="window-button minimize"
+                        type="button"
+                        aria-label="Minimize"
+                    >
+                        _
+                    </button>
+
+                    <button
+                        class="window-button maximize"
+                        type="button"
+                        aria-label="Maximize"
+                    >
+                        □
+                    </button>
+
+                    <button
+                        class="window-button close"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <div
+                class="window-content document-content"
+            >
+
+                <h1>
+                    Welcome!
+                </h1>
+
+                <p>
+                    Welcome to my little corner of the Internet.
+                </p>
+
+                <p>
+                    This website has been designed to look
+                    suspiciously like a Windows 98 computer.
+                </p>
+
+                <p>
+                    Double-click the icons on the desktop
+                    to explore.
+                </p>
+
+                <p>
+                    You can browse My Documents, check Inbox,
+                    visit the World Wide Web, play games,
+                    run Python, and even delete things.
+                </p>
+
+                <p>
+                    At this point this may technically be
+                    an operating system.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMMAND PROMPT
+             ================================================= -->
+
+        <section
+            class="window terminal-window"
+            id="command-prompt-window"
+            data-app="command-prompt"
+            data-minimized="false"
+            data-maximized="false"
+            hidden
+        >
+
+
+            <header class="window-titlebar">
+
+                <div class="window-title">
+
+                    <span>
+                        Command Prompt
+                    </span>
+
+                </div>
+
+
+                <div class="window-controls">
+
+                    <button
+                        class="window-button minimize"
+                        type="button"
+                        aria-label="Minimize"
+                    >
+                        _
+                    </button>
+
+                    <button
+                        class="window-button maximize"
+                        type="button"
+                        aria-label="Maximize"
+                    >
+                        □
+                    </button>
+
+                    <button
+                        class="window-button close"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <div class="terminal-content">
+
+                <div>
+                    Tommy MACroSoft(R) Windows 98
+                </div>
+
+                <div>
+                    (C)Copyright TommyMACroSoft Corp 1981-1998.
+                </div>
+
+                <br>
+
+
+                <div class="command-line">
+
+                    <span>
+                        C:\WINDOWS&gt;
+                    </span>
+
+                    <input
+                        type="text"
+                        class="terminal-input"
+                        autocomplete="off"
+                        spellcheck="false"
+                        aria-label="Command prompt"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DYNAMIC APPLICATIONS
+             =================================================
+
+             These windows are created by JavaScript only when
+             they are first opened:
+
+             My Documents  -> documents.js
+             Internet      -> internet.js
+             Inbox         -> inbox.js
+             Recycle Bin   -> recycle.js
+             Python        -> python.js
+             Solitaire     -> solitaire.js
+             Memory        -> memory.js
+
+             ================================================= -->
+
+
+
+        <!-- =================================================
+             START MENU
+             ================================================= -->
+
+        <nav
+            id="start-menu"
+            class="start-menu"
+            hidden
+            aria-label="Start Menu"
+        >
+
+
+            <!-- WINDOWS 98 SIDE BANNER -->
+
+            <div class="start-menu-banner">
+
+                <strong>
+                    TommyMac
+                </strong>
+
+                <span>
+                    98
+                </span>
+
+            </div>
+
+
+            <!-- START MENU ITEMS -->
+
+            <div class="start-menu-items">
+
+
+                <!-- PROGRAMS -->
+
+                <button
+                    class="start-menu-item has-submenu"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/programs.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Programs
+                    </span>
+
+                    <span class="arrow">
+                        ▶
+                    </span>
+
+                </button>
+
+
+                <!-- DOCUMENTS -->
+
+                <button
+                    class="start-menu-item has-submenu"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/documents.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Documents
+                    </span>
+
+                    <span class="arrow">
+                        ▶
+                    </span>
+
+                </button>
+
+
+                <!-- SETTINGS -->
+
+                <button
+                    class="start-menu-item has-submenu"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/settings.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Settings
+                    </span>
+
+                    <span class="submenu-arrow">▶</span>
+
+                </button>
+
+
+                <!-- FIND -->
+
+                <button
+                    class="start-menu-item has-submenu"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/find.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Find
+                    </span>
+
+                    <span class="arrow">
+                        ▶
+                    </span>
+
+                </button>
+
+
+                <!-- HELP -->
+
+                <button
+                    class="start-menu-item"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/help.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Help
+                    </span>
+
+                </button>
+
+
+                <!-- RUN -->
+
+                <button
+                    class="start-menu-item"
+                    data-app="run"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/run.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Run...
+                    </span>
+
+                </button>
+
+
+                <div class="start-menu-separator"></div>
+
+
+                <!-- SHUT DOWN -->
+
+                <button
+                    class="start-menu-item"
+                    type="button"
+                >
+
+                    <img
+                        src="icons/shutdown.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Shut Down...
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </nav>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TASKBAR
+         ===================================================== -->
+
+    <footer id="taskbar">
+
+
+        <!-- START BUTTON -->
+
+        <button
+            id="start-button"
+            type="button"
+        >
+
+            <img
+                src="icons/windows-logo.png"
+                alt=""
+            >
+
+            <strong>
+                Start
+            </strong>
+
+        </button>
+
+
+
+        <!-- QUICK LAUNCH -->
+
+        <div id="quick-launch">
+
+            <button
+                class="quick-launch-button"
+                type="button"
+                title="Show Desktop"
+                aria-label="Show Desktop"
+            >
+                🖥️
+            </button>
+
+        </div>
+
+
+
+        <!-- OPEN WINDOW BUTTONS -->
+
+        <div id="taskbar-windows">
+
+            <!--
+                desktop.js dynamically creates
+                taskbar buttons here.
+            -->
+
+        </div>
+
+
+
+        <!-- SYSTEM TRAY -->
+
+        <div id="system-tray">
+
+
+            <button
+                class="tray-icon"
+                type="button"
+                title="Volume"
+                aria-label="Volume"
+            >
+                🔊
+            </button>
+
+
+            <button
+                class="tray-icon"
+                type="button"
+                title="Network"
+                aria-label="Network"
+            >
+                🌐
+            </button>
+
+
+            <time id="clock">
+                10:45 AM
+            </time>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+
+         desktop.js MUST load first because the other modules
+         use its shared window-management functions.
+         ===================================================== -->
+<script src="desktop.js"></script>
+<script src="control-panel.js"></script>
+<script src="bsod.js"></script>
+<script src="html-editor.js"></script>
+<script src="defrag.js"></script>
+<script src="documents.js"></script>
+<script src="solitaire.js"></script>
+<script src="memory.js"></script>
+<script src="python.js"></script>
+<script src="recycle.js"></script>
+<script src="inbox.js"></script>
+<script src="internet.js"></script>
+
+
+</body>
+
+</html>
